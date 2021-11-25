@@ -4,9 +4,9 @@ import classes from "./Layout.module.css";
 
 function Layout(props) {
   return (
-    <div>
+    <div className={classes.layout}>
       <Navigation />
-      <div>
+      <div className={classes.body_wrapper}>
         <LeftBanner />
         <div>{props.children}</div>
       </div>
