@@ -3,7 +3,7 @@ import classes from "./Navigation.module.css";
 
 function Navigation() {
   return (
-    <div>
+    <div className={classes.grid}>
       <div className={classes.nav_wrapper}>
         <nav>
           <ul>

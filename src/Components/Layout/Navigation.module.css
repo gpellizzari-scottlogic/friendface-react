@@ -1,11 +1,17 @@
+.grid {
+  background-color: #630a10;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .nav_wrapper {
   width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #630a10;
-  padding-left: auto;
+  grid-column: 2;
+  margin-left: 50%;
 }
 
 .nav_wrapper ul {
@@ -19,9 +25,14 @@
   margin-left: 3rem;
 }
 
+.nav_wrapper li:hover,
+.nav_wrapper li:active {
+  background-color: #911f27;
+}
+
 .nav_wrapper a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #face7f;
   height: 100%;
 }
