@@ -1,6 +1,7 @@
-.left_banner{
-    background-color: #911F27 ;
-    height: auto;
-    height: 100%;
-    width: 30%;
+.left_banner {
+  background-color: #911f27;
+  height: auto;
+  height: 100%;
+  width: 30%;
+  flex: none;
 }

@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import PostsPage from "./Pages/PostsPage";
 import ProfilePage from "./Pages/ProfilePage";
-
 import Layout from "./Components/Layout/Layout";
 
 function App() {
