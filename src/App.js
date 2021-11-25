@@ -1,16 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 import PostsPage from "./Pages/PostsPage";
 import ProfilePage from "./Pages/ProfilePage";
-import Navigation from "./Components/Layout/Navigation";
+
+import Layout from "./Components/Layout/Layout";
+
 function App() {
   return (
-    <div>
-      <Navigation/>
+    <Layout>
       <Routes>
         <Route path="/" exact element={<PostsPage />} />
         <Route path="/profile" exact element={<ProfilePage />} />
       </Routes>
-    </div>
+    </Layout>
   );
 }
 

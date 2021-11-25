@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
+  background-color: #630A10 ;
   padding: 0 10%;
 }
 
@@ -13,7 +13,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: baseline;
 }
 
 .nav_wrapper li {
@@ -23,7 +22,8 @@
 .nav_wrapper a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fcb8d2;
+  color: #FACE7F;
+  height:100%;
 }
 
 .nav_wrapper a:hover,
