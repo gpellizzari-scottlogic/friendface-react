@@ -8,9 +8,14 @@
   height: 100%;
 }
 
-.page_content {
+.page_content_wrapper {
   overflow-y: scroll;
   background-color: #fcf0c8;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4) inset;
   height: 100%;
   width: 100%;
+}
+
+.page_content{
+    margin: 3rem 3rem;
 }

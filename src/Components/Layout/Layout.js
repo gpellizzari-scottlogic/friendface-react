@@ -2,13 +2,15 @@ import LeftBanner from "./LeftBanner";
 import Navigation from "./Navigation";
 import classes from "./Layout.module.css";
 
-function Layout({ children }) {
+function Layout(props) {
   return (
     <div className={classes.layout}>
       <Navigation />
       <div className={classes.body_wrapper}>
         <LeftBanner />
-        <div className={classes.page_content}>{children}</div>
+        <div className={classes.page_content_wrapper}>
+          <div className={classes.page_content}>{props.children}</div>
+        </div>
       </div>
     </div>
   );
