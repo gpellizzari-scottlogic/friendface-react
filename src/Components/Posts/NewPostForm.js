@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import classes from "./NewPostForm.module.css";
 import { useRef } from "react";
 
-function NewPostForm() {
+function NewPostForm(props) {
   const authorInputRef = useRef();
   const postInputRef = useRef();
 
@@ -15,6 +15,7 @@ function NewPostForm() {
       content: enteredPost,
     };
     console.log(postData);
+    props.onAddPost(postData);
   }
 
   return (

@@ -1,6 +1,5 @@
 import NewPostForm from "../Components/Posts/NewPostForm";
 import PostList from "../Components/Posts/PostList";
-import Card from "../Components/UI/Card";
 
 const EXAMPLE_POSTS = [
   {
@@ -22,9 +21,21 @@ const EXAMPLE_POSTS = [
 ];
 
 function PostsPage() {
+  function addPostHandler(postData) {
+    fetch(
+      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts.json",
+      {
+        method: 'POST',
+        body: JSON.stringify(postData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+  }
   return (
     <div>
-      <NewPostForm />
+      <NewPostForm onAddPost={addPostHandler} />
       <PostList posts={EXAMPLE_POSTS} />
     </div>
   );
