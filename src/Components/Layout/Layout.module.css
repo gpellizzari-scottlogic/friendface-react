@@ -1,0 +1,16 @@
+.layout {
+  height: 100%;
+}
+
+.body_wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.page_content {
+  overflow-y: scroll;
+  background-color: #fcf0c8;
+  height: 100%;
+  width: 100%;
+}
