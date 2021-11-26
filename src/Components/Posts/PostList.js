@@ -1,20 +1,23 @@
+import Card from "../UI/Card";
 import Post from "./Post";
 
 function PostList(props) {
   console.log(props.posts);
   return (
-    <ul>
+    <div>
       {props.posts.map((post) => (
-        <Post
-          key={post.id}
-          id={post.id}
-          author={post.author}
-          date={post.date}
-          content={post.content}
-          likes={post.likes}
-        />
+        <Card>
+          <Post
+            key={post.id}
+            id={post.id}
+            author={post.author}
+            date={post.date}
+            content={post.content}
+            likes={post.likes}
+          />
+        </Card>
       ))}
-    </ul>
+    </div>
   );
 }
 

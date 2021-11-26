@@ -1,6 +1,6 @@
-
-
+import NewPostForm from "../Components/Posts/NewPostForm";
 import PostList from "../Components/Posts/PostList";
+import Card from "../Components/UI/Card";
 
 const EXAMPLE_POSTS = [
   {
@@ -9,7 +9,7 @@ const EXAMPLE_POSTS = [
     date: "01/10/2019",
     likes: 0,
     content:
-      "Today I started using FriendFace! It's the best social media site I've ever used."
+      "Today I started using FriendFace! It's the best social media site I've ever used.",
   },
   {
     id: 2,
@@ -17,14 +17,15 @@ const EXAMPLE_POSTS = [
     date: "01/10/2019",
     likes: 7,
     content:
-      "Today I started using AlienInteraction! It's by far the best social media site I've ever used."
+      "Today I started using AlienInteraction! It's by far the best social media site I've ever used.",
   },
 ];
 
 function PostsPage() {
   return (
     <div>
-       <PostList posts={EXAMPLE_POSTS}/>
+      <NewPostForm />
+      <PostList posts={EXAMPLE_POSTS} />
     </div>
   );
 }
