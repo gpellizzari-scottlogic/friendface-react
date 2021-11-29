@@ -6,6 +6,12 @@ function NewPostForm(props) {
   const authorInputRef = useRef();
   const postInputRef = useRef();
 
+  function getCurrentDate() {
+    const timeElapsed = Date.now();
+    const today = new Date(timeElapsed);
+    return today.toLocaleDateString();
+  }
+
   function submitHandler(event) {
     event.preventDefault();
     const enteredAuthor = authorInputRef.current.value;
@@ -13,6 +19,8 @@ function NewPostForm(props) {
     const postData = {
       author: enteredAuthor,
       content: enteredPost,
+      date: getCurrentDate(),
+      likes: 0,
     };
     console.log(postData);
     props.onAddPost(postData);
