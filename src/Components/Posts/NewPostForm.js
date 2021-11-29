@@ -23,7 +23,19 @@ function NewPostForm(props) {
       likes: 0,
     };
     console.log(postData);
-    props.onAddPost(postData);
+
+    fetch(
+      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts.json",
+      {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    props.onAddPost();
   }
 
   return (
