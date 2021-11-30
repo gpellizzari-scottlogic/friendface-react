@@ -33,9 +33,11 @@ function NewPostForm(props) {
           "Content-Type": "application/json",
         },
       }
-    );
+    ).then(() => {
+      props.onAddPost();
+    });
 
-    props.onAddPost();
+    
   }
 
   return (
