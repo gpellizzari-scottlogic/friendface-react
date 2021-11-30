@@ -1,6 +1,8 @@
+import Card from "../UI/Card";
 import classes from "./Post.module.css";
 function Post(props) {
   return (
+    <Card>
     <div className={classes.item}>
       <div className={classes.post_header}>
         <div className={classes.icon}>Icon</div>
@@ -15,6 +17,8 @@ function Post(props) {
         </div>
       </div>
     </div>
+    </Card>
+    
   );
 }
 

@@ -34,7 +34,7 @@ function NewPostForm(props) {
         },
       }
     ).then(() => {
-      props.onAddPost();
+      props.setRefreshPost(true);
     });
 
     
