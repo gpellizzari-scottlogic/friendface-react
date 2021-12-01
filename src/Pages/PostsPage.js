@@ -1,5 +1,16 @@
+import NewPostForm from "../Components/Posts/NewPostForm";
+import { useState, useEffect } from "react";
+import FeedSection from "../Components/Posts/FeedSection";
+
 function PostsPage() {
-  return <div>This is the PostsPage</div>;
+  const [refreshPost, setRefreshPost] = useState(false); //used to reload the post
+
+  return (
+    <div>
+      <NewPostForm setRefreshPost={setRefreshPost}/>
+      <FeedSection setRefreshPost={setRefreshPost} refreshPost={refreshPost}/>
+    </div>
+  );
 }
 
 export default PostsPage;

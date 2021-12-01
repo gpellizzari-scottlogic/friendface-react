@@ -1,0 +1,45 @@
+form {
+  display: grid;
+}
+
+.parent {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 15px;
+}
+
+.right_button {
+  border-left: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 7;
+}
+.div3 {
+  grid-area: 2 / 1 / 4 / 6;
+}
+.div4 {
+  grid-area: 3 / 6 / 4 / 7;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  padding: 10px;
+  font-family: "Kanit", sans-serif;
+  border: solid 1px #face7f;
+  outline: 0;
+  background-color: var(--postColor);
+}
+
+input:hover,
+input:focus,
+textarea:hover {
+  border-color: #630a10;
+}
