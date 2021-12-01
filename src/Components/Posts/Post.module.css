@@ -3,24 +3,24 @@
 }
 
 .post_header {
-    display:grid;
-    grid-template-columns: 50px 100fr 1fr; 
-    grid-template-rows: 2fr;
-    grid-column-gap: 20px;
-    justify-items: stretch;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 50px 100fr 1fr;
+  grid-template-rows: 2fr;
+  grid-column-gap: 20px;
+  justify-content: stretch;
+  align-items: start;
 }
 
-.icon{
-    grid-row: 1;
+.icon {
+  grid-row: 1;
 }
 
-.author{
-    grid-row: 1;
+.author {
+  grid-row: 1;
 }
 
-.date{
-    grid-row: 1;
+.date {
+  grid-row: 1;
 }
 
 .content {
@@ -29,11 +29,11 @@
 }
 
 .actions {
-  padding: 1.5rem;
+  padding: 0.5rem 0;
   text-align: center;
 }
 
-.actions button {
+.actionss button {
   font: inherit;
   cursor: pointer;
   color: #630a10;
@@ -43,8 +43,8 @@
   border-radius: 4px;
 }
 
-.actions button:hover,
-.actions button:active {
+.actionss button:hover,
+.actionss button:active {
   background-color: #630a10;
   color: white;
 }

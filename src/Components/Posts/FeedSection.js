@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import PostList from "./PostList";
 import Centered from "../UI/Centered";
+import classes from "./FeedSection.module.css";
 
 function FeedSection(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -79,8 +80,9 @@ function FeedSection(props) {
     return <section>Loading</section>;
   }
 
+
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Centered>
         <label>Sort by:</label>
         <select
