@@ -13,7 +13,6 @@ function LikeButton(props) {
       setLiked(true);
       props.onLike();
     }
-    
   }
 
   return (

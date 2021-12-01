@@ -46,6 +46,7 @@ function NewPostForm(props) {
           required
           placeholder="author"
           ref={authorInputRef}
+          pattern="([A-z0-9À-ž .,!?&$%()\s]){1,}"
         />
         <input
           className={`${classes.div2} ${classes.right_button}`}
@@ -57,6 +58,7 @@ function NewPostForm(props) {
           rows="4"
           placeholder="what's going on?"
           ref={postInputRef}
+          pattern="([A-z0-9À-ž .,!?&$%()\s]){1,}"
         ></textarea>
         <input
           className={`${classes.div4} ${classes.right_button}`}
