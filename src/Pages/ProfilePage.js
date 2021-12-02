@@ -1,5 +1,11 @@
+import Card from "../Components/UI/Card";
+
 function ProfilePage(){
-    return <div>Profile Page</div>
+    return <Card>
+        <div>
+            
+        </div>
+    </Card>
 }
 
 export default ProfilePage;
