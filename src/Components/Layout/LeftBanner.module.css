@@ -5,3 +5,15 @@
   width: 30%;
   flex: none;
 }
+
+.content{
+  margin: 3rem 3rem;
+  color: #FACE7F;
+}
+
+.content h1{
+  writing-mode: vertical-lr;
+  text-orientation: sideways-left;
+  font-size: 5rem;
+  /* text-orientation: upright; */
+}

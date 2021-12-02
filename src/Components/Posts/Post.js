@@ -34,7 +34,7 @@ function Post(props) {
     <Card>
       <div className={classes.item}>
         <div className={classes.post_header}>
-          <div className={classes.icon}><p><img src={icon} alt="Avatar" className={classes.avatar}></img></p></div>
+          <div className={classes.icon}><img src={icon} alt="Avatar" className={classes.avatar}></img></div>
           <div className={classes.author}><p>{props.author}</p></div>
           <div className={classes.date}><p>{props.date}</p></div>
         </div>
