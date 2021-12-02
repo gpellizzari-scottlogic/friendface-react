@@ -1,6 +1,7 @@
 import Card from "../UI/Card";
 import classes from "./Post.module.css";
 import LikeButton from "./LikeButton";
+import icon from "../../Images/user_icon.png";
 function Post(props) {
 
   function onLike() {
@@ -33,12 +34,12 @@ function Post(props) {
     <Card>
       <div className={classes.item}>
         <div className={classes.post_header}>
-          <div className={classes.icon}>Icon</div>
-          <div className={classes.author}>{props.author}</div>
-          <div className={classes.date}>{props.date}</div>
+          <div className={classes.icon}><p><img src={icon} alt="Avatar" className={classes.avatar}></img></p></div>
+          <div className={classes.author}><p>{props.author}</p></div>
+          <div className={classes.date}><p>{props.date}</p></div>
         </div>
         <div>
-          <div className={classes.content}>{props.content}</div>
+          <div className={classes.content}><p>{props.content}</p></div>
           <div className={classes.actions}>
             <LikeButton likes={props.likes} onLike={onLike} onDislike={onDislike} />
           </div>

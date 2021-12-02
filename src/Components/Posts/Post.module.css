@@ -9,18 +9,28 @@
   grid-column-gap: 20px;
   justify-content: stretch;
   align-items: start;
+  vertical-align: middle;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
 }
 
 .icon {
   grid-row: 1;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .author {
   grid-row: 1;
+  vertical-align: middle;
 }
 
 .date {
   grid-row: 1;
+  vertical-align: middle;
 }
 
 .content {

@@ -1,10 +1,17 @@
 import Card from "../UI/Card";
 import classes from "./NewPostForm.module.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function NewPostForm(props) {
   const authorInputRef = useRef();
   const postInputRef = useRef();
+  const [update, setUpdate] = useState(false);
+
+  function clearInputFields () {
+    authorInputRef.current.value = "";
+    postInputRef.current.value = "";
+    setUpdate(update ? true : false);
+  }  
 
   function getCurrentDate() {
     const timeElapsed = Date.now();
@@ -35,6 +42,7 @@ function NewPostForm(props) {
       }
     ).then(() => {
       props.setRefreshPost(true);
+      clearInputFields();
     });
   }
 
