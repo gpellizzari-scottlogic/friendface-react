@@ -8,8 +8,8 @@ const ProfileContext = createContext({
 });
 
 export function ProfileContextProvider(props){
-    const [author, setAuthor] = useState();
-    const [color, setColor] = useState();
+    const [author, setAuthor] = useState("Author");
+    const [color, setColor] = useState("red");
 
     const context ={
         author: author,

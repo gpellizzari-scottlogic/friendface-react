@@ -1,17 +1,18 @@
 import Card from "../UI/Card";
 import classes from "./NewPostForm.module.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
+import ProfileContext from "../../Store/profile-context";
+import icon from "../../Images/user_icon.png";
 
 function NewPostForm(props) {
-  const authorInputRef = useRef();
   const postInputRef = useRef();
   const [update, setUpdate] = useState(false);
+  const profileCtx = useContext(ProfileContext);
 
-  function clearInputFields () {
-    authorInputRef.current.value = "";
+  function clearInputFields() {
     postInputRef.current.value = "";
     setUpdate(update ? true : false);
-  }  
+  }
 
   function getCurrentDate() {
     const timeElapsed = Date.now();
@@ -21,10 +22,9 @@ function NewPostForm(props) {
 
   function submitHandler(event) {
     event.preventDefault();
-    const enteredAuthor = authorInputRef.current.value;
     const enteredPost = postInputRef.current.value;
     const postData = {
-      author: enteredAuthor,
+      author: profileCtx.author,
       content: enteredPost,
       date: getCurrentDate(),
       likes: 0,
@@ -49,17 +49,18 @@ function NewPostForm(props) {
   return (
     <Card>
       <form className={classes.parent} onSubmit={submitHandler}>
-        <input
-          className={classes.div1}
-          required
-          placeholder="author"
-          ref={authorInputRef}
-          pattern="([A-z0-9À-ž .,!?&$%()\s]){1,}"
-        />
-        <input
-          className={`${classes.div2} ${classes.right_button}`}
-          type="color"
-        />
+        <div className={`${classes.div1} ${classes.right_button}`}>
+          <img
+            src={icon}
+            alt="Avatar"
+            className={classes.avatar}
+            style={{background: profileCtx.color}}
+          ></img>
+        </div>
+        <div className={classes.div2}>
+          <p>{profileCtx.author}</p>
+        </div>
+
         <textarea
           className={classes.div3}
           required

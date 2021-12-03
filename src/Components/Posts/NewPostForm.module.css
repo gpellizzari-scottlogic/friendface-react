@@ -15,11 +15,24 @@ form {
   border-left: 0px;
 }
 
+.avatar {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(247, 109, 104);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  display: block;
+}
+
 .div1 {
-  grid-area: 1 / 1 / 2 / 2;
+  /* grid-area: 1 / 1 / 2 / 5; */
+  grid-area:1/1/2/2;
 }
 .div2 {
-  grid-area: 1 / 2 / 2 / 7;
+  /* grid-area: 1 / 5 / 2 / 6; */
+  grid-area:1/2/2/6;
 }
 .div3 {
   grid-area: 2 / 1 / 4 / 6;
