@@ -9,34 +9,29 @@ form {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 15px;
+  align-content: center;
+  justify-content: center;
 }
 
 .right_button {
   border-left: 0px;
 }
 
-.avatar {
-  height: 50px;
-  width: 50px;
-  background-color: rgb(247, 109, 104);
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  display: block;
+.div1 {
+  grid-area: 1/1/2/2;
 }
 
-.div1 {
-  /* grid-area: 1 / 1 / 2 / 5; */
-  grid-area:1/1/2/2;
-}
 .div2 {
-  /* grid-area: 1 / 5 / 2 / 6; */
-  grid-area:1/2/2/6;
+  grid-area: 1/2/2/6;
+  font-size: 2rem;
+  padding-top: 15px;
+  font-weight: bold;
 }
+
 .div3 {
   grid-area: 2 / 1 / 4 / 6;
 }
+
 .div4 {
   grid-area: 3 / 6 / 4 / 7;
 }

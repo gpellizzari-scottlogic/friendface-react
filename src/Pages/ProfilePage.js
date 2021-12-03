@@ -1,6 +1,9 @@
 import Card from "../Components/UI/Card";
 import { useContext, useRef } from "react";
 import ProfileContext from "../Store/profile-context";
+import classes from "./ProfilePage.module.css";
+import Avatar from "../Components/Profile/Avatar";
+import icon from "../Images/user_icon.png";
 
 function ProfilePage() {
   const profileCtx = useContext(ProfileContext);
@@ -18,9 +21,9 @@ function ProfilePage() {
   return (
     <div>
       <Card>
-        <div>
-          <p>Author: {profileCtx.author}</p>
-          <p>Color: {profileCtx.color}</p>
+        <div className={classes.profile_wrapper}>
+          <div className={classes.author}>Welcome: {profileCtx.author}</div>
+          <Avatar color={profileCtx.color} icon={icon} size="60px"/>
         </div>
       </Card>
       <Card>
@@ -34,7 +37,7 @@ function ProfilePage() {
           <input
             type="color"
             ref={colorInputRef}
-            value={profileCtx.color}
+            className={classes.colorPicker}
           />
           <input
             type="submit" value="Update"

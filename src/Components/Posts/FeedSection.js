@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from "react";
 import PostList from "./PostList";
-import Centered from "../UI/Centered";
 import classes from "./FeedSection.module.css";
 
 function FeedSection(props) {
@@ -80,10 +79,9 @@ function FeedSection(props) {
     return <section>Loading</section>;
   }
 
-
   return (
     <div className={classes.wrapper}>
-      <Centered>
+      <div className={classes.sorter}>
         <label>Sort by:</label>
         <select
           id="sort-option"
@@ -94,7 +92,7 @@ function FeedSection(props) {
           <option value="date-posted">Date posted</option>
           <option value="author">Author</option>
         </select>
-      </Centered>
+      </div>
 
       <div>
         <PostList posts={loadedPosts} />

@@ -3,6 +3,7 @@ import classes from "./NewPostForm.module.css";
 import { useRef, useState, useContext } from "react";
 import ProfileContext from "../../Store/profile-context";
 import icon from "../../Images/user_icon.png";
+import Avatar from "../Profile/Avatar";
 
 function NewPostForm(props) {
   const postInputRef = useRef();
@@ -28,6 +29,7 @@ function NewPostForm(props) {
       content: enteredPost,
       date: getCurrentDate(),
       likes: 0,
+      color: profileCtx.color,
     };
     console.log(postData);
 
@@ -50,15 +52,10 @@ function NewPostForm(props) {
     <Card>
       <form className={classes.parent} onSubmit={submitHandler}>
         <div className={`${classes.div1} ${classes.right_button}`}>
-          <img
-            src={icon}
-            alt="Avatar"
-            className={classes.avatar}
-            style={{background: profileCtx.color}}
-          ></img>
+          <Avatar color={profileCtx.color} icon={icon} size="60px"/>
         </div>
         <div className={classes.div2}>
-          <p>{profileCtx.author}</p>
+          {profileCtx.author}
         </div>
 
         <textarea

@@ -7,20 +7,10 @@
   grid-template-columns: 50px 100fr 1fr;
   grid-template-rows: 2fr;
   grid-column-gap: 20px;
+  height: 50px;
   justify-content: stretch;
   align-items: start;
   vertical-align: middle;
-}
-
-.avatar {
-  height: 50px;
-  width: 50px;
-  background-color: green;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  display: block;
 }
 
 .icon {
@@ -31,21 +21,25 @@
 
 .author {
   grid-row: 1;
-  vertical-align: middle;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .date {
   grid-row: 1;
   vertical-align: middle;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .content {
   text-align: left;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .actions {
-  padding: 0.5rem 0;
+  padding: 0 0 0.5rem 0;
   text-align: center;
 }
 

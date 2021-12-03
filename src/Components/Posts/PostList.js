@@ -11,6 +11,7 @@ function PostList(props) {
           date={post.date}
           content={post.content}
           likes={post.likes}
+          color={post.color}
         />
       ))}
     </div>
