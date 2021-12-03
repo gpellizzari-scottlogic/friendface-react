@@ -10,12 +10,12 @@ function ProfilePage() {
   const authorInputRef = useRef();
   const colorInputRef = useRef();
 
-  function submitHandler(event){
-      event.preventDefault();
-      const enteredAuthor = authorInputRef.current.value;
-      const enteredColor = colorInputRef.current.value;
-      profileCtx.updateAuthor(enteredAuthor);
-      profileCtx.updateColor(enteredColor);
+  function submitHandler(event) {
+    event.preventDefault();
+    const enteredAuthor = authorInputRef.current.value;
+    const enteredColor = colorInputRef.current.value;
+    profileCtx.updateAuthor(enteredAuthor);
+    profileCtx.updateColor(enteredColor);
   }
 
   return (
@@ -23,25 +23,25 @@ function ProfilePage() {
       <Card>
         <div className={classes.profile_wrapper}>
           <div className={classes.author}>Welcome: {profileCtx.author}</div>
-          <Avatar color={profileCtx.color} icon={icon} size="60px"/>
+          <Avatar color={profileCtx.color} icon={icon} size="60px" />
         </div>
       </Card>
       <Card>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className={classes.profile_form}>
+          <label>Name:</label>
           <input
             required
             placeholder={profileCtx.author}
             ref={authorInputRef}
             pattern="([A-z0-9À-ž .,!?&$%()\s]){1,}"
           />
+          <label>Color:</label>
           <input
             type="color"
             ref={colorInputRef}
             className={classes.colorPicker}
           />
-          <input
-            type="submit" value="Update"
-          ></input>
+          <input type="submit" value="Update"></input>
         </form>
       </Card>
     </div>
