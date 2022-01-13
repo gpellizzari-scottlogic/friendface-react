@@ -9,6 +9,8 @@ form {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 15px;
+  align-content: center;
+  justify-content: center;
 }
 
 .right_button {
@@ -16,14 +18,20 @@ form {
 }
 
 .div1 {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1/1/2/2;
 }
+
 .div2 {
-  grid-area: 1 / 2 / 2 / 7;
+  grid-area: 1/2/2/6;
+  font-size: 2rem;
+  padding-top: 15px;
+  font-weight: bold;
 }
+
 .div3 {
   grid-area: 2 / 1 / 4 / 6;
 }
+
 .div4 {
   grid-area: 3 / 6 / 4 / 7;
 }

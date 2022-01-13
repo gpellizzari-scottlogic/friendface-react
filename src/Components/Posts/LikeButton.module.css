@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.btn {
+  content: "♥";
+  font: inherit;
+  cursor: pointer;
+  color: #630a10;
+  border: 1px solid #630a10;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.inActive {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 0px;
+  background-color: rgba(155, 155, 155, 0.1);
+}
+
+.active {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #630a10;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-radius: 50%;
+  padding: 0px;
+  background-color: rgba(246, 110, 110, 0.1);
+}
+
+.inActive::before {
+  color: #000;
+  font-size: 2em;
+  content: "♥";
+}
+
+.active::before {
+  color: #911f27;
+  font-size: 2em;
+  content: "♥";
+}
+
+.active:hover {
+  box-shadow: 0px 0px 0px 3px rgba(224, 6, 6, 0.1) inset;
+}
+
+.inActive:hover {
+  box-shadow: 0px 0px 0px 3px rgba(224, 6, 6, 0.1) inset;
+}
+
+.likes {
+  width: 20px;
+  vertical-align: middle;
+  text-align: center;
+}

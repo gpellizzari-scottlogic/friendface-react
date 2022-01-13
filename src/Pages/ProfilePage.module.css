@@ -1,0 +1,19 @@
+.colorPicker {
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+
+.author{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.profile_wrapper {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile_form {
+    padding: 1.5rem;
+}

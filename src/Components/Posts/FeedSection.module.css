@@ -1,0 +1,11 @@
+.wrapper {
+    padding-bottom: 3rem;
+}
+
+.sorter {
+    margin: 1.5rem auto 0 auto;
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import PostList from "./PostList";
-import Centered from "../UI/Centered";
+import classes from "./FeedSection.module.css";
 
 function FeedSection(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,10 +51,10 @@ function FeedSection(props) {
 
   function showPosts() {
     props.setRefreshPost(false);
-    console.log("fetching posts from firebase");
+    console.log("fetching posts from API");
     setIsLoading(true);
     fetch(
-      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts.json"
+      "http://localhost:8080/userposts"
     )
       .then((response) => {
         return response.json();
@@ -80,8 +80,8 @@ function FeedSection(props) {
   }
 
   return (
-    <div>
-      <Centered>
+    <div className={classes.wrapper}>
+      <div className={classes.sorter}>
         <label>Sort by:</label>
         <select
           id="sort-option"
@@ -92,7 +92,7 @@ function FeedSection(props) {
           <option value="date-posted">Date posted</option>
           <option value="author">Author</option>
         </select>
-      </Centered>
+      </div>
 
       <div>
         <PostList posts={loadedPosts} />
