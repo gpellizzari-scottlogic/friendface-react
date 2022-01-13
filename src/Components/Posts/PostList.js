@@ -8,9 +8,9 @@ function PostList(props) {
           key={post.id}
           id={post.id}
           author={post.author}
-          date={post.date}
-          content={post.content}
-          likes={post.likes}
+          date={post.dateTime}
+          content={post.contents}
+          likes={post.likeCount}
           color={post.color}
         />
       ))}

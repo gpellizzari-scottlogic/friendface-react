@@ -26,15 +26,15 @@ function NewPostForm(props) {
     const enteredPost = postInputRef.current.value;
     const postData = {
       author: profileCtx.author,
-      content: enteredPost,
-      date: getCurrentDate(),
-      likes: 0,
-      color: profileCtx.color,
+      datetime: getCurrentDate(),
+      contents: enteredPost,
+      likeCount: 0,
+      //color: profileCtx.color,
     };
     console.log(postData);
 
     fetch(
-      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts.json",
+      "http://localhost:8080/userposts",
       {
         method: "POST",
         body: JSON.stringify(postData),

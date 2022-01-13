@@ -51,10 +51,10 @@ function FeedSection(props) {
 
   function showPosts() {
     props.setRefreshPost(false);
-    console.log("fetching posts from firebase");
+    console.log("fetching posts from API");
     setIsLoading(true);
     fetch(
-      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts.json"
+      "http://localhost:8080/userposts"
     )
       .then((response) => {
         return response.json();
