@@ -52,7 +52,7 @@ function FeedSection(props) {
   }
 
   function showPosts(option) {
-    url = "http://localhost:8080/userposts";
+    const url = "http://localhost:8080/userposts";
     if(option == "author"){
       url+="/sortByAuthor";
     }
