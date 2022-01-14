@@ -9,24 +9,20 @@ import Avatar from "../Profile/Avatar";
 function Post(props) {
   const profileCtx = useContext(ProfileContext);
   function onLike() {
-    console.log("like arrived to Post element!!!");
-    updateLikes(props.id, props.likes + 1);
+    updateLikes(props.id, "like");
   }
 
   function onDislike() {
-    console.log("removing like ");
-    updateLikes(props.id, props.likes);
+    updateLikes(props.id, "dislike");
   }
 
-  function updateLikes(postID, updatedLikes) {
-    console.log("Adding " + updatedLikes + " likes to " + postID);
+  function updateLikes(postID, action) {
+    const url = "http://localhost:8080/userposts/"+ action +"/" + postID;
     fetch(
-      "https://friendface-react-90972-default-rtdb.europe-west1.firebasedatabase.app/posts/" +
-        postID +
-        "/likes.json",
+      url,
       {
         method: "PUT",
-        body: JSON.stringify(updatedLikes),
+        body: JSON.stringify(postID),
         headers: {
           "Content-Type": "application/json",
         },

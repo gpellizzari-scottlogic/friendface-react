@@ -16,6 +16,25 @@ function ProfilePage() {
     const enteredColor = colorInputRef.current.value;
     profileCtx.updateAuthor(enteredAuthor);
     profileCtx.updateColor(enteredColor);
+    const authorData = {
+      colour: enteredColor,
+      username: enteredAuthor
+    }
+
+    //add the user to the database
+    fetch(
+      "http://localhost:8080/users",
+      {
+        method: "PUT",
+        body: JSON.stringify(authorData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    ).then(() => {
+      console.log("updated the user in the database!!");
+    });
+
   }
 
   return (

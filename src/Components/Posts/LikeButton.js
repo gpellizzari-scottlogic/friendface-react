@@ -5,7 +5,6 @@ function LikeButton(props) {
   const [liked, setLiked] = useState(false);
 
   function clickHandler() {
-    console.log("like button pressed");
     if (liked) {
       setLiked(false);
       props.onDislike();
